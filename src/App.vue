@@ -1,17 +1,13 @@
 <template>
-  <div>
+  <div class="bg-black/80 text-white min-h-screen">
     <Navbar />
-    <Hero />
-    <About />
-    <Projects />
+    <Home />
     <Footer />
   </div>
 </template>
 
 <script setup>
-import Hero from "./components/Hero.vue";
-import About from "./components/About.vue";
-import Projects from "./components/Projects.vue";
-import Footer from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
+import Home from "./views/Home.vue";
+import Footer from "./components/Footer.vue";
 </script>
