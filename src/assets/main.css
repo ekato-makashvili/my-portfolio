@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import './base.css'
+
+/* Gradient background animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Particles rising */
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* Fade-up scroll animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s ease-out;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Wave animations */
+.wave {
+  transform: translateX(0);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Each wave moves slightly differently */
+.wave1 {
+  animation: wave1Move 8s infinite alternate;
+}
+.wave2 {
+  animation: wave2Move 10s infinite alternate;
+}
+.wave3 {
+  animation: wave3Move 12s infinite alternate;
+}
+
+/* Keyframes for natural movement */
+@keyframes wave1Move {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-50px) translateY(3px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes wave2Move {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-30px) translateY(5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes wave3Move {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-70px) translateY(2px); }
+  100% { transform: translateX(0) translateY(0); }
+}
